@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/research-03*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/research-01*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/email-01*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/email-02*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/emails/ /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/lifecycle-cover-*.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/summer-fridays-01.png)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/summer-fridays-logo.png)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/live-content-04*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/summer-fridays*)",
+      "Bash(for f:*)",
+      "Bash(do echo:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/summer-fridays-serum.png)",
+      "Bash(ls -la /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/summer-fridays-serum*)",
+      "Bash(ls /Users/emmaikeda/Downloads/GENERAL/PersonalWebsite/images/email-03-cover-image*)"
+    ]
+  }
+}

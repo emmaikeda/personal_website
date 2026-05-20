@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — Email Lifecycle from Scratch — Emma Ikeda</title>
+  <meta name="description" content="A full-scale, production-ready email engine built to automate the player journey for Atlas Arena — from onboarding to re-engagement." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-brand"><a href="index.html">Emma Ikeda</a></div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="featured-work.html">Featured Work</a></li>
+        <li><a href="how-i-work.html">How I Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <a href="case-studies.html" class="back-link">&larr; Back to Case Studies</a>
+        <p class="eyebrow">Case Study 03</p>
+        <h1>Designing an email <span style="color: var(--accent); font-style: italic;">lifecycle</span> from scratch.</h1>
+        <p class="lead muted" style="margin-top: 1.25rem;">
+          Developed a full-scale, production-ready email engine designed to
+          automate the entire player journey.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col case-detail-section">
+        <div>
+          <p class="eyebrow">Problem</p>
+        </div>
+        <div>
+          <p class="lead">
+            Atlas Arena, an edtech gaming product, needed a scalable way to
+            communicate value to players without manual intervention.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container two-col case-detail-section">
+        <div>
+          <p class="eyebrow">Goal</p>
+        </div>
+        <div>
+          <p class="lead">
+            Design and ship a production-ready lifecycle program that automates
+            value delivery across the full player journey, from discovery to advocacy.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container two-col case-detail-section">
+        <div>
+          <p class="eyebrow">Actions</p>
+        </div>
+        <div>
+          <ul class="case-bullets">
+            <li>Mapped a 50-point user journey, identifying key "felt value" moments for automated intervention.</li>
+            <li>Drafted tailored copy for the entire 50-email ecosystem.</li>
+            <li>Developed branded, mobile-responsive HTML templates using Claude Code and staged the full library within SendGrid for production.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container case-detail-section">
+        <p class="eyebrow">Results</p>
+        <h2>The lifecycle engine.</h2>
+        <hr class="divider" />
+
+        <p class="muted" style="max-width: 720px;">A six-stage player lifecycle covering 53 automated email touchpoints — each one triggered by a specific user behavior or moment in time.</p>
+
+        <div class="lifecycle-engine">
+          <!-- Cycle wheel diagram -->
+          <div class="lifecycle-wheel" role="img" aria-label="Player lifecycle cycle with six stages totaling 40 email touchpoints.">
+            <svg viewBox="0 0 720 660" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- Dashed cycle path -->
+              <circle cx="360" cy="320" r="210" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-dasharray="3 7" opacity="0.55" />
+
+              <!-- Center label -->
+              <text x="360" y="330" text-anchor="middle" class="wheel-center-num">53</text>
+              <text x="360" y="362" text-anchor="middle" class="wheel-center-label">TOUCHPOINTS</text>
+              <text x="360" y="382" text-anchor="middle" class="wheel-center-sub">across 6 stages</text>
+
+              <!-- 01 Acquisition (top) -->
+              <text x="360" y="42" text-anchor="middle" class="wheel-stage-label">Acquisition</text>
+              <text x="360" y="66" text-anchor="middle" class="wheel-stage-count">8 emails</text>
+              <circle cx="360" cy="120" r="38" class="wheel-dot" />
+              <text x="360" y="129" text-anchor="middle" class="wheel-stage-num">01</text>
+
+              <!-- 02 Onboarding (upper right) -->
+              <circle cx="542" cy="225" r="38" class="wheel-dot" />
+              <text x="542" y="234" text-anchor="middle" class="wheel-stage-num">02</text>
+              <text x="598" y="218" text-anchor="start" class="wheel-stage-label">Onboarding</text>
+              <text x="598" y="238" text-anchor="start" class="wheel-stage-count">9 emails</text>
+
+              <!-- 03 Activation (lower right) -->
+              <circle cx="542" cy="415" r="38" class="wheel-dot" />
+              <text x="542" y="424" text-anchor="middle" class="wheel-stage-num">03</text>
+              <text x="598" y="408" text-anchor="start" class="wheel-stage-label">Activation</text>
+              <text x="598" y="428" text-anchor="start" class="wheel-stage-count">9 emails</text>
+
+              <!-- 04 Retention (bottom) -->
+              <circle cx="360" cy="520" r="38" class="wheel-dot" />
+              <text x="360" y="529" text-anchor="middle" class="wheel-stage-num">04</text>
+              <text x="360" y="598" text-anchor="middle" class="wheel-stage-label">Retention</text>
+              <text x="360" y="618" text-anchor="middle" class="wheel-stage-count">10 emails</text>
+
+              <!-- 05 Reactivation (lower left) -->
+              <circle cx="178" cy="415" r="38" class="wheel-dot" />
+              <text x="178" y="424" text-anchor="middle" class="wheel-stage-num">05</text>
+              <text x="122" y="408" text-anchor="end" class="wheel-stage-label">Reactivation</text>
+              <text x="122" y="428" text-anchor="end" class="wheel-stage-count">8 emails</text>
+
+              <!-- 06 Referral (upper left) -->
+              <circle cx="178" cy="225" r="38" class="wheel-dot" />
+              <text x="178" y="234" text-anchor="middle" class="wheel-stage-num">06</text>
+              <text x="122" y="218" text-anchor="end" class="wheel-stage-label">Referral</text>
+              <text x="122" y="238" text-anchor="end" class="wheel-stage-count">9 emails</text>
+
+              <!-- Direction arrows along the cycle (clockwise) -->
+              <polyline points="476,128 488,138 476,148" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+              <polyline points="556,330 568,320 556,310" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+              <polyline points="476,512 488,502 476,492" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+              <polyline points="244,512 232,502 244,492" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+              <polyline points="164,330 152,320 164,310" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+              <polyline points="244,128 232,138 244,148" fill="none" stroke="#C48A8A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.6" />
+            </svg>
+          </div>
+
+          <!-- Detailed stage cards -->
+          <div class="lifecycle-stages">
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">01</span>
+                <div class="stage-card-info">
+                  <h4>Acquisition</h4>
+                  <span class="stage-card-meta">8 emails · Convert interest into access</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>Newsletter signup</li>
+                <li>Waitlist signup</li>
+                <li>Club partnership application</li>
+                <li>Support request</li>
+                <li>Handshake / Marketing list</li>
+                <li>Market research survey submission</li>
+                <li>Club lead scraper</li>
+                <li>Abandoned signup recovery</li>
+              </ul>
+            </article>
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">02</span>
+                <div class="stage-card-info">
+                  <h4>Onboarding</h4>
+                  <span class="stage-card-meta">9 emails · Get them in + remove friction</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>Account creation</li>
+                <li>T+1 day: Mission</li>
+                <li>T+2 days: Profile setup prompt</li>
+                <li>T+3 days: Play the game</li>
+                <li>T+4 days: Set learning goals</li>
+                <li>T+5 days: Milestones intro</li>
+                <li>T+6 days: Invite friends</li>
+                <li>T+7 days: 7-day checklist</li>
+                <li>T+8 days: No-play prompt</li>
+              </ul>
+            </article>
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">03</span>
+                <div class="stage-card-info">
+                  <h4>Activation</h4>
+                  <span class="stage-card-meta">9 emails · Hit the first "felt value" moment</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>First session scheduled</li>
+                <li>First challenge played</li>
+                <li>First team joined</li>
+                <li>First friend invited</li>
+                <li>First milestone unlocked</li>
+                <li>Discord connected successfully</li>
+                <li>Nexus Rating unlocked</li>
+                <li>2 weeks to competition</li>
+                <li>Post-challenge feedback</li>
+              </ul>
+            </article>
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">04</span>
+                <div class="stage-card-info">
+                  <h4>Retention</h4>
+                  <span class="stage-card-meta">10 emails · Build habit + belonging</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>Challenge scheduled</li>
+                <li>Challenge in 2 hours</li>
+                <li>This Week in the Arena</li>
+                <li>Challenge complete recap</li>
+                <li>Weekly scheduled sessions</li>
+                <li>Monthly community highlights</li>
+                <li>1 day post-competition wrap</li>
+                <li>Account anniversary</li>
+                <li>New feature announcement</li>
+                <li>Quarterly NPS / feedback request</li>
+              </ul>
+            </article>
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">05</span>
+                <div class="stage-card-info">
+                  <h4>Reactivation</h4>
+                  <span class="stage-card-meta">8 emails · Re-engage drifted players</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>7-day lapse</li>
+                <li>10-day lapse</li>
+                <li>14-day lapse</li>
+                <li>18-day lapse</li>
+                <li>21-day lapse</li>
+                <li>30-day lapse</li>
+                <li>45-day lapse + incentive</li>
+                <li>60-day final win-back</li>
+              </ul>
+            </article>
+
+            <article class="lifecycle-stage-card">
+              <header class="stage-card-header">
+                <span class="stage-card-num">06</span>
+                <div class="stage-card-info">
+                  <h4>Referral</h4>
+                  <span class="stage-card-meta">9 emails · Turn players into advocates</span>
+                </div>
+              </header>
+              <ul class="stage-triggers">
+                <li>5 challenges completed</li>
+                <li>10 challenges + club affiliation</li>
+                <li>20 challenges completed</li>
+                <li>Super-activity status</li>
+                <li>Certificate of completion unlocked</li>
+                <li>Top 10 rank on competition</li>
+                <li>Competition participation</li>
+                <li>Friend accepted invite</li>
+                <li>Reward redemption confirmation</li>
+              </ul>
+            </article>
+
+          </div>
+        </div>
+
+        <div class="lifecycle-examples">
+          <hr class="divider" style="margin: 3.5rem 0 1rem;" />
+          <p class="eyebrow">Example emails</p>
+          <h3 class="lifecycle-examples-title">Selected templates from the engine.</h3>
+          <p class="muted" style="max-width: 720px;">A few live examples from the production-ready library. Click any card to open the rendered HTML email in a new tab.</p>
+          <div class="work-grid" style="margin-top: 2rem;">
+            <a href="emails/lifecycle-example-04.html" target="_blank" rel="noopener" class="work-card work-card-link">
+              <div class="work-thumb pdf-thumb">
+                <img class="pdf-preview-img" src="images/lifecycle-cover-04.png" alt="Cover preview of the Acquisition stage Club Partnership Application email" />
+                <span class="pdf-badge" aria-hidden="true">HTML</span>
+              </div>
+              <div class="work-meta">
+                <h4>Acquisition Stage</h4>
+                <p>Club Partnership Application</p>
+              </div>
+            </a>
+            <a href="emails/lifecycle-example-01.html" target="_blank" rel="noopener" class="work-card work-card-link">
+              <div class="work-thumb pdf-thumb">
+                <img class="pdf-preview-img" src="images/lifecycle-cover-01.png" alt="Cover preview of the Onboarding stage 7-Day Checklist email" />
+                <span class="pdf-badge" aria-hidden="true">HTML</span>
+              </div>
+              <div class="work-meta">
+                <h4>Onboarding Stage</h4>
+                <p>7-Day Checklist</p>
+              </div>
+            </a>
+            <a href="emails/lifecycle-example-02.html" target="_blank" rel="noopener" class="work-card work-card-link">
+              <div class="work-thumb pdf-thumb">
+                <img class="pdf-preview-img" src="images/lifecycle-cover-02.png" alt="Cover preview of the Retention stage This Week in the Arena email" />
+                <span class="pdf-badge" aria-hidden="true">HTML</span>
+              </div>
+              <div class="work-meta">
+                <h4>Retention Stage</h4>
+                <p>This Week in the Arena</p>
+              </div>
+            </a>
+            <a href="emails/lifecycle-example-03.html" target="_blank" rel="noopener" class="work-card work-card-link">
+              <div class="work-thumb pdf-thumb">
+                <img class="pdf-preview-img" src="images/lifecycle-cover-03.png" alt="Cover preview of the Reactivation stage 21-Day Lapse email" />
+                <span class="pdf-badge" aria-hidden="true">HTML</span>
+              </div>
+              <div class="work-meta">
+                <h4>Reactivation Stage</h4>
+                <p>21-Day Lapse</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container case-detail-footer">
+        <a href="case-studies.html" class="btn btn-secondary">&larr; All Case Studies</a>
+        <a href="contact.html" class="btn btn-primary">Get in Touch</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-cta">Let's connect!</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/emma-ikeda/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:emmaikeda6@gmail.com" class="btn btn-secondary">Email</a>
+        <a href="#" class="btn btn-secondary" data-open-resume>Resume</a>
+      </div>
+      <p class="footer-meta">&copy; <span id="year"></span> Emma Ikeda</p>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="resume-modal-title">Emma Ikeda — Resume</h2>
+        <div class="modal-actions">
+          <a href="resume.pdf" class="btn btn-primary" download="Emma Ikeda Resume.pdf">Download PDF</a>
+          <button class="modal-close" aria-label="Close resume">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="resume.pdf" title="Emma Ikeda Resume"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

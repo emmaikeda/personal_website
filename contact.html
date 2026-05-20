@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Get in Touch — Emma Ikeda</title>
+  <meta name="description" content="Get in touch with Emma Ikeda — email, LinkedIn, and resume." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-brand"><a href="index.html">Emma Ikeda</a></div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="featured-work.html">Featured Work</a></li>
+        <li><a href="how-i-work.html">How I Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">Get in Touch</p>
+        <h1>Let's <span style="color: var(--accent); font-style: italic;">connect</span>.</h1>
+        <p class="lead muted" style="margin-top: 1.25rem;">
+          Open to growth marketing roles in edtech, entertainment, and beauty —
+          and always up for a coffee chat about education or careers.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <div class="container" style="max-width: 760px;">
+        <div class="contact-block">
+
+          <div class="contact-row">
+            <span class="contact-number">01</span>
+            <span class="contact-label">Email</span>
+            <span class="contact-value">
+              <a href="mailto:emmaikeda6@gmail.com">emmaikeda6@gmail.com</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-number">02</span>
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">
+              <a href="https://www.linkedin.com/in/emma-ikeda/" target="_blank" rel="noopener">linkedin.com/in/emma-ikeda</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-number">03</span>
+            <span class="contact-label">Resume</span>
+            <span class="contact-value">
+              <a href="#" data-open-resume>View Resume</a>
+            </span>
+          </div>
+
+          <div class="contact-row">
+            <span class="contact-number">04</span>
+            <span class="contact-label">Location</span>
+            <span class="contact-value">San Francisco, California</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-cta">Let's connect!</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/emma-ikeda/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:emmaikeda6@gmail.com" class="btn btn-secondary">Email</a>
+        <a href="#" class="btn btn-secondary" data-open-resume>Resume</a>
+      </div>
+      <p class="footer-meta">© <span id="year"></span> Emma Ikeda</p>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="resume-modal-title">Emma Ikeda — Resume</h2>
+        <div class="modal-actions">
+          <a href="resume.pdf" class="btn btn-primary" download="Emma Ikeda Resume.pdf">Download PDF</a>
+          <button class="modal-close" aria-label="Close resume">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="resume.pdf" title="Emma Ikeda Resume"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

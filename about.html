@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About — Emma Ikeda</title>
+  <meta name="description" content="About Emma Ikeda — psychology, cognitive research, education, and marketing." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-brand"><a href="index.html">Emma Ikeda</a></div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="featured-work.html">Featured Work</a></li>
+        <li><a href="how-i-work.html">How I Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">About</p>
+        <h1>A curious mind at the <span style="color: var(--accent); font-style: italic;">intersection</span> of research and growth.</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Background</p>
+          <h2>From psych lab to growth team.</h2>
+          <hr class="divider" />
+          <p class="muted">Based in San Francisco, California.</p>
+        </div>
+        <div>
+          <p class="lead">
+            [Placeholder: A short paragraph about your background — psychology, cognitive
+            research, education, and how all of it laid the groundwork for a career
+            in marketing.]
+          </p>
+          <p>
+            [Placeholder: Walk through the throughline — what you studied, what you
+            researched, and the moments that shaped how you think about people, learning,
+            and decision-making.]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Why Growth</p>
+          <h2>Why growth marketing.</h2>
+          <hr class="divider" />
+        </div>
+        <div>
+          <p class="lead">
+            [Placeholder: Why growth marketing specifically — what drew you in, what
+            problems you love to solve, and how your research background gives you a
+            unique lens on user behavior and program design.]
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container two-col">
+        <div>
+          <p class="eyebrow">Focus Area</p>
+          <h2>An interest in edtech.</h2>
+          <hr class="divider" />
+        </div>
+        <div>
+          <p class="lead">
+            [Placeholder: Your interest in education technology — how teaching,
+            learning research, and growth all converge in this space, and the kinds of
+            edtech problems that excite you.]
+          </p>
+          <div class="btn-group">
+            <a href="case-studies.html" class="btn btn-primary">See My Work</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-cta">Let's connect!</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/emma-ikeda/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:emmaikeda6@gmail.com" class="btn btn-secondary">Email</a>
+        <a href="#" class="btn btn-secondary" data-open-resume>Resume</a>
+      </div>
+      <p class="footer-meta">© <span id="year"></span> Emma Ikeda</p>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="resume-modal-title">Emma Ikeda — Resume</h2>
+        <div class="modal-actions">
+          <a href="resume.pdf" class="btn btn-primary" download="Emma Ikeda Resume.pdf">Download PDF</a>
+          <button class="modal-close" aria-label="Close resume">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="resume.pdf" title="Emma Ikeda Resume"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>

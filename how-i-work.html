@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>How I Work — Emma Ikeda</title>
+  <meta name="description" content="How Emma approaches growth problems — process, tools, and strengths." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary">
+      <div class="nav-brand"><a href="index.html">Emma Ikeda</a></div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="case-studies.html">Case Studies</a></li>
+        <li><a href="featured-work.html">Featured Work</a></li>
+        <li><a href="how-i-work.html">How I Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-header">
+      <div class="container">
+        <p class="eyebrow">How I Work</p>
+        <h1>Process, <span style="color: var(--accent); font-style: italic;">tools</span>, and what I'm best at.</h1>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <p class="eyebrow">Approach</p>
+        <h2>How I approach growth problems</h2>
+        <hr class="divider" />
+        <p class="lead">
+          Research-driven, experiment-led, and always grounded in real human behavior.
+        </p>
+
+        <div class="approach-grid">
+          <div class="approach-card">
+            <h3>Listen first</h3>
+            <p>Start with market research, customer discovery, and data analysis. Understand the audience and the problem before anything.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Build the system</h3>
+            <p>Design programs and workflows that compound and are structured, repeatable, and easy for a team to run.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Test, learn, scale</h3>
+            <p>Ship, measure, iterate. Treat every campaign as a hypothesis and every channel as a learning opportunity.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Write like a human</h3>
+            <p>Create copy that sounds like a person, not a bot. Adapt to each brand's unique tone of voice.</p>
+          </div>
+          <div class="approach-card">
+            <h3>Collaborate cross-functionally</h3>
+            <p>Work across teams to turn shared goals into meaningful results.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container">
+        <p class="eyebrow">Toolkit</p>
+        <h2>My preferred tools</h2>
+        <hr class="divider" />
+        <p class="muted">A snapshot of the tools I reach for most often.</p>
+
+        <ul class="tools-list">
+          <li>Asana</li>
+          <li>Canva</li>
+          <li>Claude</li>
+          <li>Figma</li>
+          <li>Google Analytics</li>
+          <li>Meta Business Suite</li>
+          <li>Microsoft Office</li>
+          <li>Notion</li>
+          <li>Qualtrics</li>
+          <li>Salesforce</li>
+          <li>SendGrid</li>
+          <li>Slack</li>
+          <li>R</li>
+          <li>WordPress</li>
+          <li>ZenDesk</li>
+        </ul>
+      </div>
+    </section>
+
+    <section style="border-top: 1px solid var(--border);">
+      <div class="container">
+        <p class="eyebrow">Strengths</p>
+        <h2>What I bring to a team</h2>
+        <hr class="divider" />
+
+        <ul class="strengths-list">
+          <li>
+            <span class="strength-title">Program building.</span>
+            <span class="muted">Designing, launching, and scaling structured programs from zero to one.</span>
+          </li>
+          <li>
+            <span class="strength-title">Copywriting.</span>
+            <span class="muted">Brand-aware writing across email, social, video scripts, and product surfaces.</span>
+          </li>
+          <li>
+            <span class="strength-title">Operations &amp; execution.</span>
+            <span class="muted">Translating strategy into shipped work — timelines, briefs, stakeholders, and details.</span>
+          </li>
+          <li>
+            <span class="strength-title">Research-driven thinking.</span>
+            <span class="muted">A psych and cognitive research background that informs how I read users and test ideas.</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p class="footer-cta">Let's connect!</p>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/emma-ikeda/" class="btn btn-primary" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="mailto:emmaikeda6@gmail.com" class="btn btn-secondary">Email</a>
+        <a href="#" class="btn btn-secondary" data-open-resume>Resume</a>
+      </div>
+      <p class="footer-meta">© <span id="year"></span> Emma Ikeda</p>
+    </div>
+  </footer>
+
+  <!-- Resume Modal -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-modal-title" aria-hidden="true">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h2 class="modal-title" id="resume-modal-title">Emma Ikeda — Resume</h2>
+        <div class="modal-actions">
+          <a href="resume.pdf" class="btn btn-primary" download="Emma Ikeda Resume.pdf">Download PDF</a>
+          <button class="modal-close" aria-label="Close resume">×</button>
+        </div>
+      </div>
+      <div class="modal-body">
+        <iframe src="resume.pdf" title="Emma Ikeda Resume"></iframe>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
+</body>
+</html>
