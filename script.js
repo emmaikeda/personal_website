@@ -119,4 +119,51 @@ document.addEventListener("DOMContentLoaded", () => {
       closeLightbox();
     }
   });
+
+  // ----- Letter-by-letter reveal on scroll into view -----
+  // Recursively wraps every character in a .letter span while preserving nested elements.
+  function splitLetters(node, counter, stagger) {
+    [...node.childNodes].forEach((child) => {
+      if (child.nodeType === Node.TEXT_NODE) {
+        const text = child.textContent;
+        const frag = document.createDocumentFragment();
+        [...text].forEach((char) => {
+          const span = document.createElement("span");
+          span.className = "letter";
+          span.setAttribute("aria-hidden", "true");
+          span.textContent = char === " " ? "\u00A0" : char;
+          span.style.transitionDelay = `${counter.i * stagger}s`;
+          frag.appendChild(span);
+          counter.i++;
+        });
+        child.replaceWith(frag);
+      } else if (child.nodeType === Node.ELEMENT_NODE) {
+        splitLetters(child, counter, stagger);
+      }
+    });
+  }
+
+  const revealTargets = document.querySelectorAll(".footer-cta, .text-reveal");
+  revealTargets.forEach((el) => {
+    const originalText = el.textContent;
+    el.setAttribute("aria-label", originalText);
+    splitLetters(el, { i: 0 }, 0.045);
+  });
+
+  if ("IntersectionObserver" in window) {
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("animate");
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    revealTargets.forEach((el) => revealObserver.observe(el));
+  } else {
+    revealTargets.forEach((el) => el.classList.add("animate"));
+  }
 });
