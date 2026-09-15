@@ -384,6 +384,219 @@ section {
   color: var(--text);
 }
 
+/* ---------- About Page Hero ---------- */
+.about-hero {
+  padding: clamp(2.5rem, 5vw, 3.5rem) 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.about-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+}
+
+.about-hero-text h1 {
+  font-size: clamp(1.85rem, 4vw, 2.75rem);
+  line-height: 1.2;
+  margin: 0.75rem 0 0;
+}
+
+.about-portrait-circle {
+  width: clamp(190px, 22vw, 230px);
+  height: clamp(190px, 22vw, 230px);
+  border-radius: 50%;
+  overflow: hidden;
+  background: #ECE7E2;
+  flex-shrink: 0;
+  box-shadow:
+    0 0 0 6px var(--bg),
+    0 0 0 7px rgba(196, 138, 138, 0.5),
+    0 20px 45px rgba(43, 43, 43, 0.15),
+    22px 22px 0 -10px rgba(196, 138, 138, 0.22);
+}
+
+.about-portrait-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.75);
+  transform-origin: center 58%;
+}
+
+@media (max-width: 640px) {
+  .about-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.75rem;
+    text-align: center;
+  }
+  .about-portrait-circle {
+    order: -1;
+    margin: 0 auto;
+  }
+}
+
+/* ---------- About Page Sections + Markers ---------- */
+.about-section {
+  padding: clamp(3.5rem, 7vw, 5rem) 0;
+  border-top: 1px solid var(--border);
+  position: relative;
+}
+
+.about-section:first-of-type {
+  border-top: none;
+}
+
+.section-marker {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  color: var(--accent);
+  opacity: 0.5;
+  line-height: 1;
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+/* ---------- Career Timeline ---------- */
+.career-timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  padding: 0;
+  margin: 3rem 0 0;
+  list-style: none;
+  gap: 0.5rem;
+}
+
+.career-timeline::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8%;
+  right: 8%;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.35;
+  z-index: 0;
+}
+
+.timeline-node {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  position: relative;
+  padding: 0 0.5rem;
+  z-index: 1;
+}
+
+.timeline-dot {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  background: var(--bg);
+  margin-bottom: 1.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-node.current .timeline-dot {
+  background: var(--accent);
+  box-shadow: 0 0 0 5px rgba(196, 138, 138, 0.18);
+}
+
+.timeline-node:hover .timeline-dot {
+  transform: scale(1.15);
+}
+
+.timeline-date {
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+}
+
+.timeline-role {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  color: var(--text);
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+  font-style: italic;
+  padding: 0 0.25rem;
+}
+
+.timeline-company {
+  font-family: var(--font-sans);
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  line-height: 1.3;
+}
+
+.timeline-node.current .timeline-company {
+  color: var(--accent);
+  font-weight: 500;
+}
+
+@media (max-width: 820px) {
+  .career-timeline {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 2rem;
+    padding-left: 1.25rem;
+  }
+  .career-timeline::before {
+    top: 6px;
+    bottom: 6px;
+    left: 5px;
+    width: 1px;
+    height: auto;
+    right: auto;
+  }
+  .timeline-node {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 0 0 1.5rem;
+    position: relative;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: -1.5rem;
+    top: 0.35rem;
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- Reveal on Scroll ---------- */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.22, 0.61, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 0.61, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-scroll {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
+
 /* ---------- Landing About Teaser ---------- */
 .about-teaser-section {
   padding: 4rem 0 3.5rem;

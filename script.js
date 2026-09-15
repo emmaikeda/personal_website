@@ -166,4 +166,23 @@ document.addEventListener("DOMContentLoaded", () => {
   } else {
     revealTargets.forEach((el) => el.classList.add("animate"));
   }
+
+  // ----- Scroll-triggered section reveal (.reveal-on-scroll) -----
+  const scrollRevealTargets = document.querySelectorAll(".reveal-on-scroll");
+  if ("IntersectionObserver" in window && scrollRevealTargets.length) {
+    const scrollRevealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            scrollRevealObserver.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: "0px 0px -60px 0px" }
+    );
+    scrollRevealTargets.forEach((el) => scrollRevealObserver.observe(el));
+  } else {
+    scrollRevealTargets.forEach((el) => el.classList.add("is-visible"));
+  }
 });
