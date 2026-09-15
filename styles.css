@@ -403,6 +403,27 @@ section {
   margin: 0.75rem 0 0;
 }
 
+.about-hero-location {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+  color: var(--muted);
+  margin: 1rem 0 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.about-hero-location::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.7;
+  flex-shrink: 0;
+}
+
 .about-portrait-circle {
   width: clamp(190px, 22vw, 230px);
   height: clamp(190px, 22vw, 230px);
